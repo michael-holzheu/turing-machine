@@ -1,4 +1,4 @@
-machine: machine.o
+machine: machine.o *.h
 
 clean:
 	rm *.o machine
