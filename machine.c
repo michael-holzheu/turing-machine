@@ -42,20 +42,33 @@ uint8_t tape_input[] = {'1', '0', '1', '1'};
 
 void state_print(struct instr *instr)
 {
+	static int tape_pos_last = -1;
+	char *color = KNRM;
 	int i;
 
-	printf("s=%d r=%c w=%c m=%c ns=%d: ",
-			instr->state_curr,
-			instr->read,
+	printf("s=%d: ", state_curr);
+	for (i = 0; i < ARRAY_LEN(tape); i++) {
+		if (i == tape_pos_last) {
+			printf(KRED "%c" KNRM, tape[i]);
+		} else if (i == tape_pos) {
+			printf(KGRN "%c" KNRM, tape[i]);
+		} else {
+			printf("%c", tape[i]);
+		}
+	}
+	if (instr->write != tape[tape_pos] && instr->write != '*') {
+		color = KRED;
+		tape_pos_last = tape_pos;
+	} else {
+		color = KGRN;
+		tape_pos_last = -1;
+	}
+	printf(" w=%s%c%s m=%c s=%d",
+			color,
 			instr->write,
+			KNRM,
 			instr->move,
 			instr->state_new);
-	for (i = 0; i < ARRAY_LEN(tape); i++) {
-		if (i == tape_pos)
-			printf(GREEN "%c" RESET, tape[i]);
-		else
-			printf("%c", tape[i]);
-	}
 	printf("\n");
 }
 

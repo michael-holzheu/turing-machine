@@ -1,5 +1,13 @@
-#define GREEN "\033[32m"
-#define RESET "\033[0m"
+
+
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
 
 #define ARRAY_LEN(a) (sizeof(a)/sizeof(a[0]))
 
