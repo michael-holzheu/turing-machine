@@ -79,7 +79,7 @@ int main(void)
 				continue;
 			state_print(instr);
 			/* Write new data */
-			if (instr->write == '*')
+			if (instr->write != '*')
 				tape[tape_pos] = instr->write;
 			/* Set new state */
 			state_curr = instr->state_new;
