@@ -14,7 +14,7 @@ int state_curr = 0;
 
 /* Turing instruction */
 
-enum move {LEFT, RIGHT, HALT};
+enum move {LEFT = 'L', RIGHT = 'R', HALT = 'H'};
 
 struct instr {
 	int state_curr;		/* Current state of machine */
@@ -40,21 +40,16 @@ struct instr instr_program[] = {
 
 uint8_t tape_input[] = {'1', '0', '1', '1'};
 
-void instr_print(struct instr *instr)
+void state_print(struct instr *instr)
 {
-	printf("s=%d r=%c w=%c m=%d ns=%d\n",
+	int i;
+
+	printf("s=%d r=%c w=%c m=%c ns=%d: ",
 			instr->state_curr,
 			instr->read,
 			instr->write,
 			instr->move,
 			instr->state_new);
-}
-
-void tape_print()
-{
-	int i;
-
-	printf("State %d: ", state_curr);
 	for (i = 0; i < ARRAY_LEN(tape); i++) {
 		if (i == tape_pos)
 			printf(GREEN "%c" RESET, tape[i]);
@@ -63,6 +58,7 @@ void tape_print()
 	}
 	printf("\n");
 }
+
 
 int main(void)
 {
@@ -81,8 +77,7 @@ int main(void)
 				continue;
 			if (instr->read != tape[tape_pos] && instr->read != '*')
 				continue;
-			tape_print();
-			instr_print(instr);
+			state_print(instr);
 			/* Write new data */
 			if (instr->write == '*')
 				tape[tape_pos] = instr->write;
