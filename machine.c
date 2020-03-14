@@ -2,29 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "helper.h"
+#include "machine.h"
 
 /* Machine state */
 
-#define BLANK		'.'
 #define TAPE_START	8
-#define FINAL		-1
 
 uint8_t tape[16];
 int tape_pos = TAPE_START;
 int state_curr = 0;
-
-/* Turing instruction */
-
-enum move {LEFT = 'L', RIGHT = 'R', NO_SHIFT = 'N'};
-
-struct instr {
-	int state_curr;		/* Current state of machine */
-	uint8_t read;		/* What is read from the tape */
-	uint8_t write;		/* What we should write to tape */
-	enum move move;		/* Move move */
-	int state_new;		/* New state for machine */
-};
 
 void state_print(struct instr *instr)
 {
