@@ -102,24 +102,3 @@ found:
 	return 0;
 }
 
-/* Action table */
-
-struct instr instr_program[] = {
-	/* State 0: Search rightmost digit */
-	{0, '0',     '0',     RIGHT, 0}, /* Skip 0s */
-	{0, '1',     '1',     RIGHT, 0}, /* Skip 1s */
-	{0, BLANK,    BLANK,  LEFT,  1}, /* Found blank */
-	/* State 1: Do addition with 1 */
-	{1, '0',     '1',     LEFT,  2}, /* 0 + 1 = 1 > done */
-	{1, '1',     '0',     LEFT,  1}, /* 1 + 1 = 0 + carry */
-	/* State 2: Accepting State */
-	{2, '*',     '*',     NO_SHIFT, FINAL},
-};
-
-uint8_t tape_input[] = {'1', '0', '1', '1'};
-
-int main(void)
-{
-	return machine_run(instr_program, ARRAY_LEN(instr_program),
-			tape_input, sizeof(tape_input));
-}
