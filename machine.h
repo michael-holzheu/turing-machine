@@ -19,6 +19,6 @@ struct instr {
 };
 
 int machine_run(struct instr* instr_vec, int instr_count,
-		uint8_t *input, int input_count);
+		uint8_t *input, int input_count, int state_init);
 
 #endif /* MACHINE_H */

@@ -20,7 +20,7 @@ void state_print(struct instr *instr)
 	char *color = KNRM;
 	int i;
 
-	printf("s=%d: ", state_curr);
+	printf("s=%c: ", state_curr);
 	for (i = 0; i < ARRAY_LEN(tape); i++) {
 		if (i == tape_pos_last) {
 			printf(KRED "%c" KNRM, tape[i]);
@@ -37,7 +37,7 @@ void state_print(struct instr *instr)
 		color = KGRN;
 		tape_pos_last = -1;
 	}
-	printf(" w=%s%c%s m=%c s=%d",
+	printf(" w=%s%c%s m=%c s=%c",
 			color,
 			instr->write,
 			KNRM,
@@ -47,7 +47,7 @@ void state_print(struct instr *instr)
 }
 
 int machine_run(struct instr* instr_vec, int instr_count,
-		uint8_t *input, int input_count)
+		uint8_t *input, int input_count, int state_init)
 {
 	struct instr *instr;
 	int i;
@@ -56,6 +56,8 @@ int machine_run(struct instr* instr_vec, int instr_count,
 	memset(tape, BLANK, sizeof(tape));
 	/* Add input */
 	memcpy(&tape[TAPE_START], input, input_count);
+	/* Set initial state */
+	state_curr = state_init;
 
 	while (1) {
 		for (i = 0; i < instr_count; i++) {
@@ -72,7 +74,7 @@ no_match:
 			continue;
 match:
 			if (instr->state_new == FINAL) {
-				printf("END: State: %d\n", instr->state_curr);
+				printf("END: State: %c\n", instr->state_curr);
 				exit(0);
 			}
 			state_print(instr);
