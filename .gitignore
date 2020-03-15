@@ -54,4 +54,6 @@ dkms.conf
 # vim files
 .*.swp
 # Binaries
-machine
+example-add-one
+example-paper-i
+example-paper-ii
