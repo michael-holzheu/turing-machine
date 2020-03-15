@@ -1,6 +1,10 @@
-all: example_add_one
+CFLAGS += -g
 
-example_add_one: machine.o example_add_one.o
+all: example-add-one example-paper-ii
+
+example-add-one: machine.o example-add-one.o
+example-paper-ii: machine.o machine-paper.o example-paper-ii.o
+machine-paper: machine.o machine-paper.o
 
 clean:
-	rm -f *.o example_add_one
+	rm -f *.o example-add-one example-paper-ii

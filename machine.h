@@ -18,7 +18,17 @@ struct instr {
 	int state_new;		/* New state for machine */
 };
 
-int machine_run(struct instr* instr_vec, int instr_count,
-		uint8_t *input, int input_count, int state_init);
+int machine_run(const struct instr* instr_vec, int instr_count,
+		const uint8_t *input, int input_count, int state_init);
+
+void machine_prog_print(struct instr* instr_vec, int instr_count);
+
+void machine_configuration_print();
+
+#define IS_SUBSTATE(x) (x & 0xffffff00)
+#define SUBSTATE(x,y) (x | (y << 8))
+
+#define STATE_GET(x) (x & 0xff)
+#define SUBSTATE_GET(x) (x>>8 & 0xffffff)
 
 #endif /* MACHINE_H */
