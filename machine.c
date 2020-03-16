@@ -97,11 +97,11 @@ int machine_run(const struct instr *instr_vec, int instr_count,
 no_match:
 			continue;
 match:
+			state_print(instr);
 			if (instr->state_new == FINAL) {
 				printf("END: State: %c\n", instr->state_curr);
 				exit(0);
 			}
-			state_print(instr);
 			/* Write new data */
 			if (instr->write != '*')
 				tape[tape_pos] = instr->write;
