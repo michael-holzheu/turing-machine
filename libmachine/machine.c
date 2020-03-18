@@ -46,7 +46,7 @@ void state_print(const struct instr *instr)
 			instr->write,
 			KNRM,
 			instr->move,
-			instr->state_new);
+			instr->state_new == FINAL ? '-' : instr->state_new);
 	printf("\n");
 }
 
