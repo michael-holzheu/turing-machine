@@ -14,7 +14,7 @@ struct instr {
 	int state_curr;		/* Current state of machine */
 	uint8_t read;		/* What is read from the tape */
 	uint8_t write;		/* What we should write to tape */
-	enum move move;		/* Move move */
+	enum move move;		/* Move read-write head */
 	int state_new;		/* New state for machine */
 };
 
