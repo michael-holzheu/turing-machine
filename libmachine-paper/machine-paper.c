@@ -4,8 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "helper.h"
-#include "machine-paper.h"
+#include "lib/machine-paper.h"
+#include "lib/util_base.h"
+#include "lib/util_libc.h"
 
 static struct instr *paper_to_machine(const struct instr_paper *instr_paper_vec,
 				      int instr_paper_count, int *instr_machine_count)
@@ -22,8 +23,8 @@ static struct instr *paper_to_machine(const struct instr_paper *instr_paper_vec,
 
 		first = true;
 		while (true) {
-			instr_machine_vec = realloc(instr_machine_vec, ++instr_count *
-						    sizeof(*instr_machine_vec));
+			instr_machine_vec = util_realloc(instr_machine_vec, ++instr_count *
+							 sizeof(*instr_machine_vec));
 			instr_machine = &instr_machine_vec[instr_count - 1];
 			if (first) {
 				instr_machine->read = instr_paper->symbol_scanned;

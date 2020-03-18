@@ -1,17 +1,44 @@
-CFLAGS += -g
+ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)
 
-TARGETS= example-add-one  \
-	 example-paper-i  \
-	 example-paper-ii \
-	 example-paper-add-one
+# Include common definitions
+include common.mak
 
-all: ${TARGETS}
+LIB_DIRS = libutil libmachine libmachine-paper
+TOOL_DIRS = examples
+SUB_DIRS = $(LIB_DIRS) $(TOOL_DIRS)
 
-example-add-one: machine.o example-add-one.o
-example-paper-i: machine.o machine-paper.o example-paper-i.o
-example-paper-ii: machine.o machine-paper.o example-paper-ii.o
-example-paper-add-one: machine.o machine-paper.o example-paper-add-one.o
-machine-paper: machine.o machine-paper.o
+all: $(TOOL_DIRS)
+clean: $(TOOL_DIRS)
+install: $(TOOL_DIRS)
 
-clean:
-	rm -f *.o ${TARGETS}
+#
+# For simple "make" we explicitly set the MAKECMDGOALS to "all".
+#
+ifeq ($(MAKECMDGOALS),)
+MAKECMDGOALS = all
+endif
+
+#
+# We have to build the libraries before the tools are built. Otherwise
+# the tools would trigger parallel "make -C" builds for libraries in
+# case of "make -j".
+#
+# MAKECMDGOALS contains the list of goals, e.g. "clean all". We use
+# "foreach" to generate a ";" separated list of "make -C <target>".
+# For example the the expansion for "make clean all" is:
+#
+# $(MAKE) -C $@ [..] clean ;  $(MAKE) -C $@ [...] all ;
+#
+# This ensures that the commandline targets are serialized and also "make -j"
+# works as expected, e.g. "make clean all -j 20".
+#
+
+$(TOOL_DIRS): $(LIB_DIRS)
+	$(foreach goal,$(MAKECMDGOALS), \
+		$(MAKE) -C $@ TOPDIR=$(TOPDIR) ARCH=$(ARCH) $(goal) ;)
+.PHONY: $(TOOL_DIRS)
+
+$(LIB_DIRS):
+	$(foreach goal,$(MAKECMDGOALS), \
+		$(MAKE) -C $@ TOPDIR=$(TOPDIR) ARCH=$(ARCH) $(goal) ;)
+.PHONY: $(LIB_DIRS)

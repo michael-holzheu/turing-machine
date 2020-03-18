@@ -25,10 +25,10 @@ void machine_prog_print(struct instr* instr_vec, int instr_count);
 
 void machine_configuration_print();
 
-#define IS_SUBSTATE(x) (x & 0xffffff00)
-#define SUBSTATE(x,y) (x | (y << 8))
+#define IS_SUBSTATE(x) ((x) & 0xffffff00)
+#define SUBSTATE(x,y) ((x) | ((y) << 8))
 
-#define STATE_GET(x) (x & 0xff)
-#define SUBSTATE_GET(x) (x>>8 & 0xffffff)
+#define STATE_GET(x) ((x) & 0xff)
+#define SUBSTATE_GET(x) ((x)>>8 & 0xffffff)
 
 #endif /* MACHINE_H */

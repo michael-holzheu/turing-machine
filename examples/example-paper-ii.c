@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
-#include "helper.h"
-#include "machine-paper.h"
+#include "lib/machine-paper.h"
+#include "lib/util_base.h"
 
 static struct instr_paper instr_paper_program[] = {
 	{'b', '*',   "Pe,R,Pe,R,P0,R,R,P0,L,L", 'o'},
@@ -18,6 +18,6 @@ static struct instr_paper instr_paper_program[] = {
 
 int main(void)
 {
-	return machine_paper_run(instr_paper_program, ARRAY_LEN(instr_paper_program),
+	return machine_paper_run(instr_paper_program, (int) UTIL_ARRAY_SIZE(instr_paper_program),
 			         NULL, 0, 'b');
 }

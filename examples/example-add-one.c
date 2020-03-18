@@ -2,8 +2,8 @@
  * Add one to binary number
  */
 
-#include "helper.h"
-#include "machine.h"
+#include "lib/machine.h"
+#include "lib/util_base.h"
 
 /* Action table */
 
@@ -23,6 +23,6 @@ uint8_t tape_input[] = {'1', '0', '1', '1'};
 
 int main(void)
 {
-	return machine_run(instr_program, ARRAY_LEN(instr_program),
+	return machine_run(instr_program, (int)UTIL_ARRAY_SIZE(instr_program),
 			tape_input, sizeof(tape_input), 'a');
 }

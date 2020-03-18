@@ -1,4 +1,5 @@
-
+#ifndef HELPER_H
+#define HELPER_H
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -9,5 +10,4 @@
 #define KCYN  "\x1B[36m"
 #define KWHT  "\x1B[37m"
 
-#define ARRAY_LEN(a) (sizeof(a)/sizeof(a[0]))
-
+#endif /* HELPER_H */

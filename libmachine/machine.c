@@ -3,8 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "lib/machine.h"
+#include "lib/util_base.h"
+
 #include "helper.h"
-#include "machine.h"
 
 /* Machine state */
 
@@ -24,7 +26,7 @@ void state_print(const struct instr *instr)
 		return;
 
 	printf("s=%c: ", state_curr);
-	for (i = 0; i < ARRAY_LEN(tape); i++) {
+	for (i = 0; i < (int) UTIL_ARRAY_SIZE(tape); i++) {
 		if (i == tape_pos_last)
 			printf(KRED "%c" KNRM, tape[i]);
 		else if (i == tape_pos)
@@ -72,7 +74,7 @@ void machine_prog_print(struct instr *instr_vec, int instr_count)
 int machine_run(const struct instr *instr_vec, int instr_count,
 		const uint8_t *input, int input_count, int state_init)
 {
-	const struct instr *instr;
+	const struct instr *instr = NULL;
 	int i;
 
 	/* Initialize tape with blanks */
@@ -118,7 +120,7 @@ match:
 			case NO_SHIFT:
 				break;
 			}
-			if (tape_pos > (ARRAY_LEN(tape) - 1) || tape_pos < 0) {
+			if (tape_pos > (int)(UTIL_ARRAY_SIZE(tape) - 1) || tape_pos < 0) {
 				printf("Out of tape: pos=%d\n", tape_pos);
 				exit(1);
 			}
