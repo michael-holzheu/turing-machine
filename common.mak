@@ -315,32 +315,13 @@ $(rootdir)/libutil/libutil.a: $(rootdir)/libutil
 	$(MAKE) -C $(rootdir)/libutil/ libutil.a
 .PHONY: $(rootdir)/libutil
 
-$(rootdir)/libccw/libccw.a: $(rootdir)/libccw
-	$(MAKE) -C $(rootdir)/libccw/ libccw.a
-.PHONY: $(rootdir)/libccw
+$(rootdir)/libmachine/libmachine.a: $(rootdir)/libmachine
+	$(MAKE) -C $(rootdir)/libmachine/ libmachine.a
+.PHONY: $(rootdir)/libmachine
 
-$(rootdir)/libvtoc/libvtoc.a: $(rootdir)/libvtoc
-	$(MAKE) -C $(rootdir)/libvtoc/ libvtoc.a
-.PHONY: $(rootdir)/libvtoc
-
-$(rootdir)/libdasd/libdasd.a: $(rootdir)/libdasd
-	$(MAKE) -C $(rootdir)/libdasd/ libdasd.a
-.PHONY: $(rootdir)/libdasd
-
-$(rootdir)/libzds/libzds.a: $(rootdir)/libzds
-	$(MAKE) -C $(rootdir)/libzds/ libzds.a
-.PHONY: $(rootdir)/libzds
-
-$(rootdir)/libvmdump/libvmdump.a: $(rootdir)/libvmdump
-	$(MAKE) -C $(rootdir)/libvmdump/ libvmdump.a
-.PHONY: $(rootdir)/libvmdump
-
-$(rootdir)/libvmcp/libvmcp.a: $(rootdir)/libvmcp
-	$(MAKE) -C $(rootdir)/libvmcp/ libvmcp.a
-.PHONY: $(rootdir)/libvmcp
-
-$(rootdir)/zipl/boot/data.o:
-	$(MAKE) -C $(rootdir)/zipl/boot/ data.o
+$(rootdir)/libmachine-paper/libmachine-paper.a: $(rootdir)/libmachine-paper
+	$(MAKE) -C $(rootdir)/libmachine-paper/ libmachine-paper.a
+.PHONY: $(rootdir)/libmachine-paper
 
 install_dirs:
 	for dir in $(INSTDIRS); do \
