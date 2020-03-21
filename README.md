@@ -30,7 +30,8 @@ s=b 1000............................................................ w=1 m=L s=c
 s=c 1100............................................................ w=* m=N s=- # Accpeting state
 ```
 
-Run the first example from Turing`s paper:
+Show the action table of the first example from Turing`s paper:
+
 
 ```bash
 ~/src/turing-machine (master)$ examples/example-paper-i -l
@@ -40,7 +41,12 @@ s=c:00 r=. w=* m=R, ns=e:00 # R
 s=e:00 r=. w=1 m=N, ns=e:04 # P1,R
 s=e:04 r=* w=* m=R, ns=f:00 # P1,R
 s=f:00 r=. w=* m=R, ns=b:00 # R
+```
 
+Run the first example from Turing`s paper on a tape with 16 bytes:
+
+
+```
 ~/src/turing-machine (master)$ examples/example-paper-i -s 16
 s=b ................ # P0,R
 s=c 0............... # R
