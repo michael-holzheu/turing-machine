@@ -14,7 +14,7 @@
 #include "lib/machine-paper.h"
 #include "lib/util_base.h"
 
-#if 0
+#if 1
 static struct instr_paper instr_paper_program[] = {
 	{'b', BLANK,   "P0,R", 'c'},
 	{'c', BLANK,   "R",    'e'},
