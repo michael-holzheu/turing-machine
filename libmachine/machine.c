@@ -147,6 +147,7 @@ int machine_run(const struct instr *instr_vec, int instr_count,
 	while (1) {
 		for (i = 0; i < instr_count; i++) {
 			instr = &instr_vec[i];
+			/* Find matching configuration (state & scanned symbol) */
 			if (instr->state_curr != state_curr)
 				goto no_match;
 			if (instr->read == tape[tape_pos])
@@ -162,7 +163,7 @@ match:
 			if (instr->state_new == FINAL) {
 				exit(EXIT_SUCCESS);
 			}
-			/* Write new data */
+			/* Write new symobl */
 			if (instr->write != '*')
 				tape[tape_pos] = instr->write;
 			/* Set new state */
