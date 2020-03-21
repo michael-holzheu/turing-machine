@@ -1,4 +1,4 @@
-# Implementation of an Universal Turing Machine in C
+# Universal Turing Machine in C
 
 Contents of package:
 
@@ -30,7 +30,7 @@ s=c 1100............................................................ w=* m=N s=-
 Run the first example from Turing`s paper:
 
 ```bash
-holzheu:~/src/turing-machine (master)$ examples/example-paper-i -s 32
+~/src/turing-machine (master)$ examples/example-paper-i -s 32
 s=b ................................ # P0
 s=b 0............................... # R,R,P1
 s=b 0.1............................. # R,R,P0
