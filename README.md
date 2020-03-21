@@ -3,7 +3,10 @@
 Contents of package:
 
 - libmachine: Implementation of a standard Universal Turing Machine (UTM)
+  - include/lib/machine.h: Prototypes
 - libmachine-paper: Turing Machine that understands the programs from Alan Turing's paper
+  - include/lib/machine-paper.h: Prototypes
+- libutil: Helper functions from s390-tools package
 - examples: Sample Turing machines
 
 Build:
