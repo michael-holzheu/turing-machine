@@ -1,3 +1,14 @@
+/*
+ * machine-paper - Universal Turing Machine from Alan Turing's paper
+ *
+ * Convert the paper version to simpler machine instructions
+ *
+ * Copyright Michael Holzheu 2020
+ *
+ * This is free software; you can redistribute it and/or modify
+ * it under the terms of the MIT license. See LICENSE for details.
+ */
+
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -8,6 +19,9 @@
 #include "lib/util_base.h"
 #include "lib/util_libc.h"
 
+/*
+ * Convert the paper version to simpler machine instructions by inserting substates
+ */
 static struct instr *paper_to_machine(const struct instr_paper *instr_paper_vec,
 				      int instr_paper_count, int *instr_machine_count)
 {
@@ -26,6 +40,7 @@ static struct instr *paper_to_machine(const struct instr_paper *instr_paper_vec,
 			instr_machine_vec = util_realloc(instr_machine_vec, ++instr_count *
 							 sizeof(*instr_machine_vec));
 			instr_machine = &instr_machine_vec[instr_count - 1];
+			instr_machine->comment = instr_paper->operations;
 			if (first) {
 				instr_machine->read = instr_paper->symbol_scanned;
 				instr_machine->state_curr = SUBSTATE(instr_paper->m_config, 0);
@@ -66,6 +81,9 @@ static struct instr *paper_to_machine(const struct instr_paper *instr_paper_vec,
 	return instr_machine_vec;
 }
 
+/*
+ * Run a paper Turing machine with a given input
+ */
 int machine_paper_run(const struct instr_paper *instr_vec, int instr_count,
 		      const uint8_t *input, int input_count, int state_init)
 {
@@ -73,7 +91,5 @@ int machine_paper_run(const struct instr_paper *instr_vec, int instr_count,
 	int instr_machine_count;
 
 	instr_machine_vec = paper_to_machine(instr_vec, instr_count, &instr_machine_count);
-	machine_prog_print(instr_machine_vec, instr_machine_count);
 	return machine_run(instr_machine_vec, instr_machine_count, input, input_count, state_init);
 }
-

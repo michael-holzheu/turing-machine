@@ -1,9 +1,18 @@
+/*
+ * machine-paper - Universal Turing Machine from Alan Turing's paper
+ *
+ * Copyright Michael Holzheu 2020
+ *
+ * This is free software; you can redistribute it and/or modify
+ * it under the terms of the MIT license. See LICENSE for details.
+ */
+
 #ifndef MACHINE_PAPER_H
 #define MACHINE_PAPER_H
 
 #include <stdint.h>
 
-#include "machine.h"
+#include "lib/machine.h"
 
 struct instr_paper {
 	int m_config;		/* Current state of machine */

@@ -4,7 +4,7 @@ lib = libmachine.a
 
 all: $(lib)
 
-objects = machine.o
+objects = machine.o opts.o
 
 $(lib): $(objects)
 

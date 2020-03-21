@@ -1,3 +1,12 @@
+/*
+ * machine - Universal Turing Machine (UTM)
+ *
+ * Copyright Michael Holzheu 2020
+ *
+ * This is free software; you can redistribute it and/or modify
+ * it under the terms of the MIT license. See LICENSE for details.
+ */
+
 #ifndef MACHINE_H
 #define MACHINE_H
 
@@ -16,14 +25,12 @@ struct instr {
 	uint8_t write;		/* What we should write to tape */
 	enum move move;		/* Move read-write head */
 	int state_new;		/* New state for machine */
+	char *comment;		/* Comment that describes instruction */
 };
 
+void machine_init(int argc, char *argv[], char *desc);
 int machine_run(const struct instr* instr_vec, int instr_count,
 		const uint8_t *input, int input_count, int state_init);
-
-void machine_prog_print(struct instr* instr_vec, int instr_count);
-
-void machine_configuration_print();
 
 #define IS_SUBSTATE(x) ((x) & 0xffffff00)
 #define SUBSTATE(x,y) ((x) | ((y) << 8))

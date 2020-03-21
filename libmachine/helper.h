@@ -1,3 +1,14 @@
+/*
+ * machine - Universal Turing Machine (UTM)
+ *
+ * Helper functions
+ *
+ * Copyright Michael Holzheu 2020
+ *
+ * This is free software; you can redistribute it and/or modify
+ * it under the terms of the MIT license. See LICENSE for details.
+ */
+
 #ifndef HELPER_H
 #define HELPER_H
 
