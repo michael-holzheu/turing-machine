@@ -14,7 +14,7 @@
 
 /* Action table */
 
-struct instr instr_program[] = {
+struct instr program[] = {
 	/* State a: Search rightmost digit */
 	{'a', '0',     '0',     RIGHT, 'a', "Skip 0s"},
 	{'a', '1',     '1',     RIGHT, 'a', "Skip 1s"},
@@ -31,6 +31,6 @@ uint8_t tape_input[] = {'1', '0', '1', '1'};
 int main(int argc, char *argv[])
 {
 	machine_init(argc, argv, "Binary add one example");
-	return machine_run(instr_program, (int)UTIL_ARRAY_SIZE(instr_program),
-			tape_input, sizeof(tape_input), 'a');
+	return machine_run(program, UTIL_ARRAY_SIZE(program),
+			   tape_input, sizeof(tape_input), 'a');
 }

@@ -15,14 +15,14 @@
 #include "lib/util_base.h"
 
 #if 1
-static struct instr_paper instr_paper_program[] = {
+static struct instr_paper program[] = {
 	{'b', BLANK,   "P0,R", 'c'},
 	{'c', BLANK,   "R",    'e'},
 	{'e', BLANK,   "P1,R", 'f'},
 	{'f', BLANK,   "R",    'b'},
 };
 #else
-static struct instr_paper instr_paper_program[] = {
+static struct instr_paper program[] = {
 	{'b', BLANK, "P0",     'b'},
 	{'b', '0',   "R,R,P1", 'b'},
 	{'b', '1',   "R,R,P0", 'b'},
@@ -32,6 +32,6 @@ static struct instr_paper instr_paper_program[] = {
 int main(int argc, char *argv[])
 {
 	machine_init(argc, argv, "Print infinite zeroes and ones");
-	return machine_paper_run(instr_paper_program, (int) UTIL_ARRAY_SIZE(instr_paper_program),
+	return machine_paper_run(program, UTIL_ARRAY_SIZE(program),
 			         NULL, 0, 'b');
 }

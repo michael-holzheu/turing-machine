@@ -31,6 +31,6 @@ int main(int argc, char *argv[])
 {
 	machine_init(argc, argv, "Print pattern 0 1 0 1 1 0 1 1 1 0 1 1 1 1 ...");
 	return machine_paper_run(instr_paper_program,
-			(int) UTIL_ARRAY_SIZE(instr_paper_program),
+			UTIL_ARRAY_SIZE(instr_paper_program),
 			NULL, 0, 'b');
 }
