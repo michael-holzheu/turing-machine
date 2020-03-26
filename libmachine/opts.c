@@ -48,7 +48,7 @@ static struct util_opt opt_vec[] = {
 	UTIL_OPT_SECTION("OPTIONS"),
 	{
 		.option = { "delay", required_argument, NULL, 'd'},
-		.argument = "SECONDS",
+		.argument = "1/10-SECONDS",
 		.desc = "Wait time after each rule"
 	},
 	{

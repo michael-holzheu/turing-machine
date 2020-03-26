@@ -71,7 +71,7 @@ static void state_print(const struct instr *instr)
 	if (instr->comment)
 		printf(" # %s", instr->comment);
 	printf("\n");
-	sleep(opts.delay);
+	usleep(opts.delay * 100000);
 }
 
 /*
