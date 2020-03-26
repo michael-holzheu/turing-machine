@@ -14,6 +14,12 @@ The package also contains the following files:
  * [LICENSE](LICENSE): The MIT license that applies to this package
  * [CHANGELOG](CHANGELOG.md): The history of turing-machine versions
 
+### Movie
+
+We created a movie to explain how a Turing machine works:
+
+- The Turing Machine: https://youtu.be/I_5Tk4sgUAE
+
 ### Build
 
 ```bash
