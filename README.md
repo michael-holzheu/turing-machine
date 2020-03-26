@@ -9,6 +9,11 @@ Contents of package:
 - libutil: Helper functions from s390-tools package
 - examples: Sample Turing machines
 
+The package also contains the following files:
+
+ * [LICENSE](LICENSE): The MIT license that applies to this package
+ * [CHANGELOG](CHANGELOG.md): The history of turing-machine versions
+
 Build:
 
 ```bash
