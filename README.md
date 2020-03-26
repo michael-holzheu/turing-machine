@@ -1,6 +1,6 @@
 # Universal Turing Machine in C
 
-Contents of package:
+### Contents of package
 
 - libmachine: Implementation of a standard Universal Turing Machine (UTM)
   - include/lib/machine.h: Prototypes
@@ -14,13 +14,13 @@ The package also contains the following files:
  * [LICENSE](LICENSE): The MIT license that applies to this package
  * [CHANGELOG](CHANGELOG.md): The history of turing-machine versions
 
-Build:
+### Build
 
 ```bash
 ~/src/turing-machine (master)$ make
 ```
 
-Run an example:
+### Run examples
 
 ```bash
 ~/src/turing-machine (master)$ examples/example-add-one
