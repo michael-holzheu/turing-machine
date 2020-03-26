@@ -32,6 +32,8 @@ void machine_init(int argc, char *argv[], char *desc);
 int machine_run(const struct instr* instr_vec, int instr_count,
 		const uint8_t *input, int input_count, int state_init);
 
+/* Full state: 3 bytes substate and 1 byte state */
+
 #define IS_SUBSTATE(x) ((x) & 0xffffff00)
 #define SUBSTATE(x,y) ((x) | ((y) << 8))
 
