@@ -14,6 +14,8 @@
 
 #include "lib/machine.h"
 
+#define NONE BLANK
+
 struct instr_paper {
 	int m_config;		/* Current state of machine */
 	uint8_t symbol_scanned;	/* What is read from the tape */

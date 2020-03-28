@@ -15,7 +15,7 @@
 #include "lib/util_base.h"
 
 static struct instr_paper program[] = {
-	{'b', BLANK,   "P1,R,P0,R,P1,R,P1", 'c'},
+	{'b', NONE,    "P1,R,P0,R,P1,R,P1", 'c'},
 	{'c', '0',     "P1,L",              'd'},
 	{'c', '1',     "P0,L",              'c'},
 	{'d', '*',     "",                FINAL},

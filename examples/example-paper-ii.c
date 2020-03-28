@@ -19,12 +19,12 @@ static struct instr_paper instr_paper_program[] = {
 	{'o', '1',   "R,Px,L,L,L",              'o'},
 	{'o', '0',   "",                        'q'},
 	{'q', '+',   "R,R",                     'q'},
-	{'q', BLANK, "P1,L",                    'p'},
+	{'q', NONE,  "P1,L",                    'p'},
 	{'p', 'x',   "E,R",                     'q'},
 	{'p', 'e',   "R",                       'f'},
-	{'p', BLANK, "L,L",                     'p'},
+	{'p', NONE,  "L,L",                     'p'},
 	{'f', '+',   "R,R",                     'f'},
-	{'f', BLANK, "P0,L,L",                  'o'},
+	{'f', NONE,  "P0,L,L",                  'o'},
 };
 
 int main(int argc, char *argv[])
