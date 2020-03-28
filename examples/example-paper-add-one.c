@@ -14,6 +14,9 @@
 #include "lib/machine-paper.h"
 #include "lib/util_base.h"
 
+/*
+ * Input numbers require at least one zero, e.g. use 011 instead of 11
+ */
 static struct instr_paper program[] = {
 	{'b', NONE,    "P1,R,P0,R,P1,R,P1", 'c'},
 	{'c', '0',     "P1,L",              'd'},
