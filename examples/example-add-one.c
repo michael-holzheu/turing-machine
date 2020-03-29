@@ -14,6 +14,9 @@
 
 /* Action table */
 
+/*
+ * Input numbers require at least one zero, e.g. use 011 instead of 11
+ */
 struct instr program[] = {
 	/* State a: Search rightmost digit */
 	{'a', '0',     '0',     RIGHT, 'a', "Skip 0s"},
