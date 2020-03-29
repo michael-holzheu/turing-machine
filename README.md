@@ -18,7 +18,7 @@ The package also contains the following files:
 
 We created a movie to explain how a Turing machine works:
 
-- The Turing Machine: https://youtu.be/I_5Tk4sgUAE
+- The Turing Machine: https://youtu.be/XK2kEuJuRgs
 
 ### Build
 
