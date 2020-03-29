@@ -57,7 +57,7 @@ s=f:00 r=. w=* m=R, ns=b:00 # R
 Run the first example from Turing`s paper on a tape with 16 bytes:
 
 
-```
+```bash
 ~/src/turing-machine (master)$ examples/example-paper-i -s 16
 s=b ................ # P0,R
 s=c 0............... # R
