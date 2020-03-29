@@ -26,7 +26,7 @@ struct instr program[] = {
 	{'b', '0',     '1',     LEFT,  'c', "0 + 1 = 1 > done"},
 	{'b', '1',     '0',     LEFT,  'b', "1 + 1 = 0 + carry"},
 	/* State 2: Accepting State */
-	{'c', '*',     '*',     NO_SHIFT, FINAL, "Accpeting state"},
+	{'c', '*',     '*',     NO_SHIFT, FINAL, "Accepting state"},
 };
 
 uint8_t tape_input[] = {'1', '0', '1', '1'};
