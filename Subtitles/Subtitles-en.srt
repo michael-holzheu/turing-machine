@@ -1,0 +1,1558 @@
+1
+00:00:14,640 --> 00:00:16,040
+Alan Turing was
+
+2
+00:00:16,040 --> 00:00:19,000
+born in the year 1912 in London.
+
+3
+00:00:20,160 --> 00:00:22,320
+It soon became clear
+
+4
+00:00:22,320 --> 00:00:26,280
+that a very talented boy arrived
+on the island.
+
+5
+00:00:27,440 --> 00:00:31,520
+For example, it is reported that he taught
+himself to read within
+
+6
+00:00:31,560 --> 00:00:36,120
+three weeks and he was drawn to numbers
+and puzzles early on.
+
+7
+00:00:37,440 --> 00:00:39,640
+Alan was very interested in science
+
+8
+00:00:40,000 --> 00:00:43,560
+and after school he studied mathematics in 
+Cambridge.
+
+9
+00:00:44,520 --> 00:00:46,840
+Then in 1936,
+
+10
+00:00:47,320 --> 00:00:50,840
+when he was 24, he published a
+paper titled
+
+11
+00:00:51,480 --> 00:00:57,880
+On Computable Numbers with an application to
+the “Entscheidungsproblem”
+
+12
+00:00:58,080 --> 00:01:00,960
+by Alen Mathison Turing.
+
+13
+00:01:02,600 --> 00:01:05,920
+This work dealt with the question of
+decidability
+
+14
+00:01:06,200 --> 00:01:10,640
+posed by the German David Herbert in 1928.
+
+15
+00:01:11,240 --> 00:01:13,520
+The problem was the following:
+
+16
+00:01:14,640 --> 00:01:17,120
+Is each possible question
+
+17
+00:01:17,480 --> 00:01:20,640
+in a given mathematical system decidable?
+
+18
+00:01:22,240 --> 00:01:28,320
+Or in other words, can you find for each possible
+Yes/No question
+
+19
+00:01:28,320 --> 00:01:31,200
+an algorithm that answers this question?
+
+20
+00:01:32,760 --> 00:01:36,600
+For example, let's take the
+natural numbers,
+
+21
+00:01:37,360 --> 00:01:41,200
+where you can ask: Is number x even?
+
+22
+00:01:42,720 --> 00:01:46,160
+In this case it is easy to find an algorithm
+
+23
+00:01:46,160 --> 00:01:48,600
+that answers the question, namely,
+
+24
+00:01:49,320 --> 00:01:53,720
+yes, if the remainder of x divided
+by two is zero,
+
+25
+00:01:54,720 --> 00:01:57,320
+and no otherwise.
+
+26
+00:01:57,520 --> 00:01:59,520
+But...
+
+27
+00:01:59,680 --> 00:02:04,920
+Are there perhaps questions that can't be answered?
+
+28
+00:02:05,760 --> 00:02:08,960
+In the following years, there have
+been developed
+
+29
+00:02:09,000 --> 00:02:13,000
+three different solutions to Hilbert's
+“Entscheidungsproblem”.
+
+30
+00:02:14,360 --> 00:02:18,760
+The first was published by Kurt Gödel
+in 1931.
+
+31
+00:02:19,080 --> 00:02:27,320
+In his paper “Über formal unentscheidbare Sätze der Principia
+Mathematica und verwandter Systeme I”
+
+32
+00:02:28,200 --> 00:02:30,720
+The second in 1936
+
+33
+00:02:31,440 --> 00:02:36,640
+by Alonzo Church in “A note on the
+Entscheidungsproblem”
+
+34
+00:02:37,040 --> 00:02:39,720
+And finally Alan Turing shortly later,
+
+35
+00:02:39,840 --> 00:02:43,920
+also in 1936, in his famous paper.
+
+36
+00:02:45,720 --> 00:02:48,120
+All three colleagues
+
+37
+00:02:48,320 --> 00:02:51,240
+used different methods
+for their solutions.
+
+38
+00:02:51,960 --> 00:02:55,800
+But today we only focus on
+Alan Turing's idea,
+
+39
+00:02:56,360 --> 00:03:00,920
+who specifically invented a machine
+for his prove.
+
+40
+00:03:01,880 --> 00:03:04,160
+This thing was only hypothetical.
+
+41
+00:03:05,160 --> 00:03:08,040
+And it is today called by his name...
+
+42
+00:03:08,040 --> 00:03:09,600
+Simply
+
+43
+00:03:10,680 --> 00:03:13,920
+The Turing Machine!
+
+44
+00:03:18,160 --> 00:03:20,400
+Alan has already made himself
+
+45
+00:03:20,400 --> 00:03:24,240
+comfortable in his chair to explain his
+invention to us.
+
+46
+00:03:25,840 --> 00:03:27,240
+A Turing machine
+
+47
+00:03:27,240 --> 00:03:30,240
+uses an infinite tape as storage device,
+
+48
+00:03:30,640 --> 00:03:34,040
+which is divided into separate squares.
+
+49
+00:03:34,040 --> 00:03:37,560
+Each square can store exactly one symbol.
+
+50
+00:03:38,280 --> 00:03:41,880
+We start with an empty tape
+where the squares
+
+51
+00:03:41,880 --> 00:03:45,440
+initially carry
+a special symbol called the blank.
+
+52
+00:03:46,960 --> 00:03:50,600
+At one point in time, the machine is
+only directly aware
+
+53
+00:03:50,640 --> 00:03:55,440
+of a single square, which alone named the
+scanned square.
+
+54
+00:03:56,400 --> 00:03:59,960
+The symbol within the scanned
+square is called
+
+55
+00:03:59,960 --> 00:04:03,000
+the scanned symbol.
+
+56
+00:04:03,000 --> 00:04:06,480
+The machine is able to read
+the scanned symbol,
+
+57
+00:04:07,080 --> 00:04:10,000
+print a new one, erase a symbol
+
+58
+00:04:10,200 --> 00:04:13,080
+and move left or right.
+
+59
+00:04:14,760 --> 00:04:16,840
+For remembering things
+
+60
+00:04:17,160 --> 00:04:20,480
+Turing gave the machine an additional
+small storage
+
+61
+00:04:21,000 --> 00:04:23,880
+and called it the m-configuration.
+
+62
+00:04:25,640 --> 00:04:26,760
+At startup
+
+63
+00:04:26,760 --> 00:04:30,240
+the configuration is set to an
+initial value.
+
+64
+00:04:30,520 --> 00:04:33,360
+For example, let's say “a”.
+
+65
+00:04:33,360 --> 00:04:36,640
+When the machine runs, the m-configuration
+can change.
+
+66
+00:04:36,960 --> 00:04:39,480
+For example, from “a” to “b”.
+
+67
+00:04:40,560 --> 00:04:44,040
+So now we saw the three things
+that can be altered
+
+68
+00:04:44,040 --> 00:04:48,160
+in a Turing machine, namely
+the contents of the tape,
+
+69
+00:04:48,880 --> 00:04:51,280
+the currently scanned square
+
+70
+00:04:51,800 --> 00:04:55,440
+and the m-configuration.
+
+71
+00:04:55,440 --> 00:04:58,760
+Together, they define the the full
+state of the machine,
+
+72
+00:04:59,160 --> 00:05:02,800
+which is then called the complete
+configuration.
+
+73
+00:05:03,840 --> 00:05:06,720
+The program for the Turing
+machine is stored in a table.
+
+74
+00:05:07,800 --> 00:05:10,200
+Here is Alen's sample program
+
+75
+00:05:10,200 --> 00:05:13,240
+number one from his paper.
+
+76
+00:05:13,240 --> 00:05:15,880
+The first two columns define the
+configuration
+
+77
+00:05:16,120 --> 00:05:19,720
+with the current m-configuration
+and the scanned symbol.
+
+78
+00:05:21,240 --> 00:05:23,160
+In the third and fourth column
+
+79
+00:05:23,160 --> 00:05:28,520
+the behavior is defined by the operations on the tape,
+like printing or moving,
+
+80
+00:05:28,800 --> 00:05:32,800
+and the final m-configuration.
+
+81
+00:05:32,800 --> 00:05:37,040
+A given m-configuration together with the currently
+scanned symbol,
+
+82
+00:05:37,320 --> 00:05:41,000
+define exactly which operations
+should be executed
+
+83
+00:05:41,240 --> 00:05:44,960
+and which next m-configuration should
+then be loaded.
+
+84
+00:05:46,520 --> 00:05:51,000
+So now let's run the example.
+
+85
+00:05:51,000 --> 00:05:54,040
+The machine starts in m-configuration “b”
+
+86
+00:05:54,600 --> 00:05:56,760
+and the scanned symbol is a blank,
+
+87
+00:05:57,200 --> 00:06:00,440
+which is called “None” in the table.
+
+88
+00:06:00,440 --> 00:06:06,160
+Therefore the first line is selected and then the defined
+operations are executed.
+
+89
+00:06:07,120 --> 00:06:11,840
+First, a zero is printed to the tape,
+then the machine moves
+
+90
+00:06:11,840 --> 00:06:14,960
+so that it scans the square immediately
+
+91
+00:06:14,960 --> 00:06:19,680
+on the right of the one it was
+scanning previously.
+
+92
+00:06:19,680 --> 00:06:22,880
+At the end, the machine goes over
+into the final
+
+93
+00:06:22,920 --> 00:06:26,000
+m-configuration “c”.
+
+94
+00:06:26,000 --> 00:06:29,160
+So that the first step.
+
+95
+00:06:29,160 --> 00:06:31,040
+Next, the machine checks again
+
+96
+00:06:31,040 --> 00:06:35,560
+the  m-configuration, which is “c” and scans
+
+97
+00:06:35,560 --> 00:06:39,760
+the symbol that is a second blank.
+
+98
+00:06:39,760 --> 00:06:43,760
+Then it looks for a matching
+configuration, finds
+
+99
+00:06:43,800 --> 00:06:47,000
+the correct line, moves right
+
+100
+00:06:47,000 --> 00:06:52,920
+this time without printing, and then changes
+the m-configuration to “e”.
+
+101
+00:06:53,760 --> 00:06:58,560
+In the third machine cycle, we find again the
+matching column.
+
+102
+00:06:58,560 --> 00:07:04,400
+This time we print one, more right
+and then enter the m-configuration “f”.
+
+103
+00:07:05,760 --> 00:07:08,640
+In the last row we again move right,
+
+104
+00:07:08,640 --> 00:07:14,120
+and then switch back to m-configuration “b”,
+which was the first configuration
+
+105
+00:07:14,120 --> 00:07:18,560
+and therefore we have implemented a loop.
+
+106
+00:07:18,560 --> 00:07:22,000
+So Alen's simple machine is printing
+
+107
+00:07:22,000 --> 00:07:24,440
+alternating zeros and ones
+
+108
+00:07:25,080 --> 00:07:27,880
+to infinity and beyond.
+
+109
+00:07:29,400 --> 00:07:31,640
+Maybe you are not so impressed
+
+110
+00:07:31,640 --> 00:07:34,960
+by a program that just writes
+zeros and ones.
+
+111
+00:07:35,560 --> 00:07:38,280
+Okay, so let's show
+
+112
+00:07:38,280 --> 00:07:41,880
+another one that is doing at least
+something useful.
+
+113
+00:07:42,840 --> 00:07:48,040
+What about adding a one to a given
+binary number?
+
+114
+00:07:48,040 --> 00:07:53,000
+The initial m-configuration is “b”. In
+the first line
+
+115
+00:07:53,040 --> 00:08:00,600
+the input number is written to the tape,
+namely 1011,
+
+116
+00:08:01,480 --> 00:08:04,680
+which is decimal 11.
+
+117
+00:08:04,680 --> 00:08:07,800
+Then we switch to m-configuration “c”,
+
+118
+00:08:08,400 --> 00:08:11,040
+where the adding program starts.
+
+119
+00:08:12,040 --> 00:08:16,800
+For m-configuration “c”, we have
+two lines.
+
+120
+00:08:17,160 --> 00:08:22,160
+One for the scanned symbol zero and
+another one for one.
+
+121
+00:08:23,280 --> 00:08:27,640
+This can be seen as something like an
+"if then else" statement
+
+122
+00:08:29,040 --> 00:08:31,520
+Because the scanned symbol is one,
+
+123
+00:08:31,880 --> 00:08:34,040
+we switch to line three,
+
+124
+00:08:34,880 --> 00:08:37,640
+where the addition one plus one is done
+
+125
+00:08:38,000 --> 00:08:41,120
+and the result zero is stored on the tape.
+
+126
+00:08:42,400 --> 00:08:45,000
+Then we move left.
+
+127
+00:08:45,000 --> 00:08:47,120
+We still have to process the carry
+
+128
+00:08:47,400 --> 00:08:50,560
+and therefore stay in m-configuration “c”.
+
+129
+00:08:51,440 --> 00:08:53,960
+Another one is read and we do
+
+130
+00:08:53,960 --> 00:08:56,000
+the same operation again.
+
+131
+00:08:57,240 --> 00:08:59,240
+Then we read a zero
+
+132
+00:08:59,280 --> 00:09:01,760
+and therefore switch to row two,
+
+133
+00:09:02,760 --> 00:09:06,120
+which is the other branch of our
+
+134
+00:09:06,120 --> 00:09:09,680
+“if then else” statement.
+
+135
+00:09:09,680 --> 00:09:16,200
+There the processing of the carry is finished and we
+then enter the m-configuration “d”,
+
+136
+00:09:16,920 --> 00:09:19,840
+where the machine finally halts.
+
+137
+00:09:21,000 --> 00:09:22,480
+Well done!
+
+138
+00:09:23,040 --> 00:09:26,280
+The Turing machine has computed
+the correct result,
+
+139
+00:09:26,960 --> 00:09:31,040
+which is decimal 12.
+
+140
+00:09:33,480 --> 00:09:36,200
+So what are the important steps?
+
+141
+00:09:37,280 --> 00:09:41,040
+First, we have a question that should be
+answered by an algorithm.
+
+142
+00:09:41,400 --> 00:09:44,280
+For example, what is x plus one?
+
+143
+00:09:45,360 --> 00:09:48,680
+Next, we have to encode the input in a way
+
+144
+00:09:48,960 --> 00:09:51,040
+that is understandable by the program.
+
+145
+00:09:52,040 --> 00:09:57,240
+In our example, we encoded the
+decimal number 11 in binary.
+
+146
+00:09:57,960 --> 00:10:01,920
+The program, writes this input
+to the tape.
+
+147
+00:10:01,920 --> 00:10:06,120
+The algorithm to answer the question is
+stored in the table.
+
+148
+00:10:07,200 --> 00:10:09,920
+It loads the initial m-configuration
+
+149
+00:10:09,920 --> 00:10:12,360
+and then executes the program,
+
+150
+00:10:13,480 --> 00:10:20,080
+which works on the input and then writes the
+answer as output back to the tape.
+
+151
+00:10:20,280 --> 00:10:27,200
+If the input is valid, finally it enters an accepting
+state and then halts.
+
+152
+00:10:28,640 --> 00:10:34,120
+Modern descriptions of Turing machines
+normally use different terms.
+
+153
+00:10:34,800 --> 00:10:37,680
+The m-configuration is called the state.
+
+154
+00:10:38,600 --> 00:10:43,560
+The mechanism to read and write from
+the tape is called the read-write head.
+
+155
+00:10:44,520 --> 00:10:50,080
+In general, it is assumed that the input
+is not written by the program,
+
+156
+00:10:50,360 --> 00:10:55,200
+but instead it's copied to the tape
+in a separate initialization step.
+
+157
+00:10:56,480 --> 00:10:58,520
+One operation in the table
+
+158
+00:10:58,840 --> 00:11:03,240
+normally consists out of a single write
+and a single movement.
+
+159
+00:11:03,920 --> 00:11:06,120
+Finally, the program is called
+
+160
+00:11:06,360 --> 00:11:15,120
+the Action table.
+
+161
+00:11:17,240 --> 00:11:22,320
+Now that we saw how a Turing machine
+works in principle, you may ask:
+
+162
+00:11:22,400 --> 00:11:25,800
+What can we calculate with it?
+
+163
+00:11:26,280 --> 00:11:29,200
+Well, for example, arithmetic operations
+
+164
+00:11:29,400 --> 00:11:31,800
+like addition or multiplication.
+
+165
+00:11:32,880 --> 00:11:37,200
+But it can also answer real
+world questions like
+
+166
+00:11:37,360 --> 00:11:41,840
+which bird is on this picture or which song is
+currently playing?
+
+167
+00:11:42,840 --> 00:11:44,280
+But before answering
+
+168
+00:11:44,280 --> 00:11:49,760
+those questions we have to digitize and
+encode the real world objects
+
+169
+00:11:50,200 --> 00:11:54,040
+and write this representation to
+the tape.
+
+170
+00:11:55,080 --> 00:11:57,080
+Sounds somehow unbelievable
+
+171
+00:11:57,120 --> 00:12:00,200
+that such a simple machine
+can do all this.
+
+172
+00:12:00,520 --> 00:12:01,280
+But...
+
+173
+00:12:01,840 --> 00:12:03,120
+Yes really!
+
+174
+00:12:03,880 --> 00:12:08,960
+In principle Turing machines are as powerful as
+desktop computers,
+
+175
+00:12:09,320 --> 00:12:11,840
+smartphones, or even supercomputers.
+
+176
+00:12:12,680 --> 00:12:17,320
+And it is said that also quantum computers
+cannot calculate more.
+
+177
+00:12:18,480 --> 00:12:19,960
+Believe it or not,
+
+178
+00:12:19,960 --> 00:12:23,760
+until today, nobody has found a
+more powerful
+
+179
+00:12:23,760 --> 00:12:25,640
+computing mechanism.
+
+180
+00:12:27,240 --> 00:12:28,520
+There is a term
+
+181
+00:12:28,520 --> 00:12:31,480
+that describes this computational power,
+
+182
+00:12:32,160 --> 00:12:34,760
+namely “Turing complete”.
+
+183
+00:12:36,160 --> 00:12:38,720
+If a system is Turing complete,
+
+184
+00:12:39,080 --> 00:12:43,920
+it is able to calculate everything that also a
+Turing machine can do.
+
+185
+00:12:44,600 --> 00:12:48,000
+Or in other words, it is able to simulate
+
+186
+00:12:48,000 --> 00:12:50,640
+any Turing machine that can do this work.
+
+187
+00:12:51,960 --> 00:12:54,840
+And by the way, almost every
+
+188
+00:12:54,840 --> 00:12:58,320
+programing language is also
+Turing complete.
+
+189
+00:12:59,840 --> 00:13:03,720
+So which features are required to
+make all this possible?
+
+190
+00:13:04,920 --> 00:13:07,360
+The Turing machine has an endless tape,
+
+191
+00:13:07,800 --> 00:13:10,200
+which is the memory of today's machines.
+
+192
+00:13:11,080 --> 00:13:13,880
+Then we need a place for storing
+the program.
+
+193
+00:13:14,960 --> 00:13:18,000
+The Read-write heas is used to address
+the memory.
+
+194
+00:13:18,600 --> 00:13:22,080
+Today's machines have a memory
+bus for this purpose.
+
+195
+00:13:23,040 --> 00:13:26,600
+The m-configuration stores the
+state of the program.
+
+196
+00:13:27,400 --> 00:13:30,760
+This is something like a program counter
+or line number
+
+197
+00:13:31,040 --> 00:13:34,200
+which remembers the current location in
+the program.
+
+198
+00:13:35,920 --> 00:13:40,440
+Then we have some instructions that can be
+used by the system...
+
+199
+00:13:41,040 --> 00:13:44,120
+Namely “read”, “if then else”
+
+200
+00:13:44,600 --> 00:13:47,320
+“write” and “goto”.
+
+201
+00:13:47,320 --> 00:13:51,480
+So if your machine or programing language
+has at least these features,
+
+202
+00:13:51,800 --> 00:13:55,920
+it is probably Turing complete.
+
+203
+00:13:56,520 --> 00:13:59,120
+Okay, but what about the human brain?
+
+204
+00:13:59,520 --> 00:14:02,640
+Is it also Turing complete?
+
+205
+00:14:02,640 --> 00:14:04,320
+We can save information
+
+206
+00:14:04,320 --> 00:14:06,960
+and afterwards remember it.
+
+207
+00:14:06,960 --> 00:14:09,440
+We can make decisions.
+
+208
+00:14:09,440 --> 00:14:13,680
+And we can simulate any Turing machine
+by hand.
+
+209
+00:14:14,400 --> 00:14:17,600
+As we have seen just some minutes ago.
+
+210
+00:14:18,720 --> 00:14:19,560
+Therefore...
+
+211
+00:14:20,440 --> 00:14:25,040
+Yes, we are Turing complete!
+
+212
+00:14:25,280 --> 00:14:26,520
+Okay, cool.
+
+213
+00:14:26,520 --> 00:14:29,480
+But perhaps we are even better
+than a Turing machine?
+
+214
+00:14:30,080 --> 00:14:32,800
+Here we should be not too optimistic.
+
+215
+00:14:33,480 --> 00:14:36,280
+Alonzo Church and Alan Turing
+claimed...
+
+216
+00:14:36,920 --> 00:14:41,880
+Everything which is intuitive computable is also
+Turing computable.
+
+217
+00:14:43,680 --> 00:14:46,840
+So for each problem where we can
+find a description
+
+218
+00:14:46,840 --> 00:14:50,320
+to solve it, there must exist a
+Turing machine!
+
+219
+00:14:51,200 --> 00:14:54,200
+In other words, if you can teach someone
+
+220
+00:14:54,240 --> 00:14:58,320
+something, you could also
+formulate the rules
+
+221
+00:14:58,320 --> 00:15:01,920
+in a program that implements what you
+have just described.
+
+222
+00:15:03,240 --> 00:15:06,880
+So perhaps Turing machines are as
+intelligent as humans.
+
+223
+00:15:08,360 --> 00:15:11,440
+But this is just a thesis and therefore
+
+224
+00:15:11,720 --> 00:15:14,440
+not yet approved!
+
+225
+00:15:15,520 --> 00:15:19,400
+Some more words on theory versus reality.
+
+226
+00:15:20,880 --> 00:15:23,120
+Turing machines are so powerful
+
+227
+00:15:23,280 --> 00:15:26,920
+because they are only hypothetical machines
+
+228
+00:15:27,240 --> 00:15:31,560
+with infinite memory and irrelevant
+speed characteristics.
+
+229
+00:15:32,880 --> 00:15:35,000
+But real machines are limited!
+
+230
+00:15:35,640 --> 00:15:38,240
+Your problem must fit into the memory.
+
+231
+00:15:38,640 --> 00:15:41,440
+For example, if the picture of the
+bird is too big
+
+232
+00:15:41,440 --> 00:15:44,600
+for your machine, you can’t find out
+which bird it is.
+
+233
+00:15:45,640 --> 00:15:49,240
+Also, the processing speed must be sufficient for
+your problem!
+
+234
+00:15:50,080 --> 00:15:52,920
+If you want to forecast the weather
+for tomorrow
+
+235
+00:15:53,280 --> 00:15:55,920
+and your program needs a week to calculate
+this,
+
+236
+00:15:55,920 --> 00:15:58,320
+well, it does not help much!
+
+237
+00:15:59,120 --> 00:16:03,800
+Finally, a navigation program on a computer that
+weights a ton and has
+
+238
+00:16:03,840 --> 00:16:08,840
+the size of a building will probably not
+be very useful for guiding
+
+239
+00:16:08,880 --> 00:16:10,800
+you through a foreign city.
+
+240
+00:16:11,720 --> 00:16:13,520
+Therefore, we have so many
+
+241
+00:16:13,520 --> 00:16:17,520
+different types of computers.
+
+242
+00:16:18,120 --> 00:16:20,280
+But let's come back to Turing's paper
+
+243
+00:16:20,560 --> 00:16:23,400
+and his proof of the “Entscheidungsproblem”.
+
+244
+00:16:25,080 --> 00:16:27,560
+Up to now, we used exactly one
+
+245
+00:16:27,600 --> 00:16:30,320
+Turing machine for exactly one problem.
+
+246
+00:16:30,960 --> 00:16:36,600
+In his paper Alan Turing generalized this and showed
+how to build a machine
+
+247
+00:16:36,600 --> 00:16:41,160
+that is able to execute every other possible
+Turing machine.
+
+248
+00:16:41,880 --> 00:16:44,400
+He called this more general thing
+
+249
+00:16:45,000 --> 00:16:47,520
+the “Universal machine”.
+
+250
+00:16:48,600 --> 00:16:52,160
+First, every normal Turing machine
+must be encoded
+
+251
+00:16:52,440 --> 00:16:55,360
+and then written to the tape.
+
+252
+00:16:55,360 --> 00:16:56,920
+To show how this works,
+
+253
+00:16:56,920 --> 00:17:00,200
+we again take our first example from before.
+
+254
+00:17:01,200 --> 00:17:05,440
+The m-configurations are encoded
+with the letter “A”,
+
+255
+00:17:06,040 --> 00:17:10,440
+namely “b” as “A”,  “c” as “AA”,
+
+256
+00:17:10,680 --> 00:17:15,320
+“e” as “AAA” and “f” as “AAAA”.
+
+257
+00:17:16,160 --> 00:17:20,040
+Then the print operations are encoded
+with a “P”.
+
+258
+00:17:21,080 --> 00:17:23,040
+The move operations are encoded
+
+259
+00:17:23,040 --> 00:17:27,560
+with “R” for right and “L” for left.
+
+260
+00:17:28,880 --> 00:17:30,640
+For the symbols we use a single
+
+261
+00:17:30,640 --> 00:17:34,720
+“C” for blank, for zero “CC”
+
+262
+00:17:35,040 --> 00:17:37,360
+and for one “CCC”.
+
+263
+00:17:38,960 --> 00:17:41,040
+Finally, we use a semicolon
+
+264
+00:17:41,040 --> 00:17:44,040
+as separator for the different lines.
+
+265
+00:17:44,640 --> 00:17:46,960
+So now the machine is fully encoded.
+
+266
+00:17:47,680 --> 00:17:50,000
+Alan Turing called this scheme
+
+267
+00:17:50,280 --> 00:17:53,360
+the standard description.
+
+268
+00:17:53,360 --> 00:17:56,160
+Now let's copy the encoded table
+to the tape.
+
+269
+00:17:57,000 --> 00:18:02,440
+This is somehow similar to loading a program
+in a “Von-Neumann-Computer”,
+
+270
+00:18:02,440 --> 00:18:04,040
+where the program and the data
+
+271
+00:18:04,040 --> 00:18:06,080
+is stored in the same memory.
+
+272
+00:18:07,280 --> 00:18:10,680
+Finally, Alan Turing used the known instructions
+
+273
+00:18:10,680 --> 00:18:15,760
+to write the Universal machine that was able to
+read any other machine
+
+274
+00:18:15,760 --> 00:18:19,680
+description from the tape,
+execute its operations,
+
+275
+00:18:19,840 --> 00:18:24,400
+and so could create exactly the same output as the
+original machine.
+
+276
+00:18:25,160 --> 00:18:30,760
+So in other words, the Universal machine
+simulates the other machine!
+
+277
+00:18:32,200 --> 00:18:36,360
+Or you can see it also as a Turing machine
+interpreter.
+
+278
+00:18:37,920 --> 00:18:41,000
+Today, this new machine is called
+
+279
+00:18:41,000 --> 00:18:45,360
+the Universal Turing Machine, or
+shortly UTM.
+
+280
+00:18:46,560 --> 00:18:50,360
+A UTM can simulate any other
+Turing machine,
+
+281
+00:18:50,880 --> 00:18:53,360
+any real world computing device
+
+282
+00:18:53,640 --> 00:18:55,680
+or any programing language.
+
+283
+00:18:56,720 --> 00:18:59,520
+So of course it is also Turing complete!
+
+284
+00:19:00,560 --> 00:19:02,600
+Or the other way round...
+
+285
+00:19:02,600 --> 00:19:06,920
+Any Turing machine, real world computing device or
+computer language
+
+286
+00:19:07,200 --> 00:19:11,120
+that can implement a UTM is
+Turing complete.
+
+287
+00:19:13,040 --> 00:19:15,000
+As an example, we implemented
+
+288
+00:19:15,000 --> 00:19:20,520
+a UTM in the C programing language where any possible
+Turing machine
+
+289
+00:19:20,520 --> 00:19:23,760
+can be specified in a simple array.
+
+290
+00:19:27,120 --> 00:19:30,640
+Instruction after instruction is read in a short loop,
+
+291
+00:19:30,960 --> 00:19:33,800
+which then simulates the behavior.
+
+292
+00:19:35,760 --> 00:19:40,960
+So let's run the first “zero-one” printing example...
+
+293
+00:19:54,640 --> 00:19:58,280
+And then our “binary add plus one” example...
+
+294
+00:20:02,640 --> 00:20:06,000
+Seems to do the right thing!
+
+295
+00:20:06,000 --> 00:20:08,360
+With his Universal machine
+
+296
+00:20:08,760 --> 00:20:13,920
+Alan Turing now had built the tool for the final
+proof on the “Entscheidungsproblem”.
+
+297
+00:20:15,160 --> 00:20:17,480
+To answer the ultimate question...
+
+298
+00:20:18,840 --> 00:20:25,320
+Is there a Turing machine for every problem?
+
+299
+00:20:26,160 --> 00:20:28,680
+The proof is a little bit complicated,
+
+300
+00:20:29,160 --> 00:20:32,160
+and for ordinary mortals, not really
+
+301
+00:20:32,160 --> 00:20:34,840
+trivial to understand.
+
+302
+00:20:35,280 --> 00:20:38,680
+Therefore, in the following we just show the
+idea of the proof.
+
+303
+00:20:40,000 --> 00:20:41,600
+Alan investigated,
+
+304
+00:20:41,600 --> 00:20:46,560
+if it is possible to write a program that can
+decide if another program
+
+305
+00:20:46,840 --> 00:20:49,680
+will halt or loop.
+
+306
+00:20:49,680 --> 00:20:52,960
+This problem is called the “Halting problem”.
+
+307
+00:20:54,120 --> 00:20:56,360
+As shown before it is possible
+
+308
+00:20:56,400 --> 00:20:59,320
+to encode and write any program
+to the tape.
+
+309
+00:21:00,120 --> 00:21:05,560
+So now together with the Program “P” the
+input “I” is written.
+
+310
+00:21:05,560 --> 00:21:09,080
+Then we assume that there is a
+Turing machine “H”
+
+311
+00:21:09,440 --> 00:21:14,800
+that is able to answer the question
+if “P” does halt with input “I”.
+
+312
+00:21:15,960 --> 00:21:20,760
+So we feed into “H” the program “P”
+and input “I”.
+
+313
+00:21:22,120 --> 00:21:25,560
+Then “H” reads “P” and “I” from the tape
+
+314
+00:21:26,120 --> 00:21:31,200
+somehow simulates the behavior of “P”
+and returns “yes” if
+
+315
+00:21:31,200 --> 00:21:35,040
+“P” would halt and “no” if 
+loops forever.
+
+316
+00:21:36,000 --> 00:21:39,720
+So if you put our first example program
+into “H”,
+
+317
+00:21:40,200 --> 00:21:43,600
+“H” would say “no”, because the program loops.
+
+318
+00:21:44,840 --> 00:21:47,400
+For the second program, it would say “yes”,
+
+319
+00:21:47,760 --> 00:21:51,880
+because as we saw, the addition
+plus one halts
+
+320
+00:21:51,880 --> 00:21:55,000
+with the input 1011.
+
+321
+00:21:56,680 --> 00:22:03,480
+For the proof Turing now expanded “H” and built a
+program “H+” around it.
+
+322
+00:22:04,760 --> 00:22:07,560
+“H+” is basically the same as “H”,
+
+323
+00:22:08,640 --> 00:22:10,800
+with two extra lines of code...
+
+324
+00:22:11,760 --> 00:22:16,400
+Namely, if “H” says “yes”, we loop.
+
+325
+00:22:16,960 --> 00:22:19,960
+If "H" says “no”, we halt!
+
+326
+00:22:21,680 --> 00:22:22,680
+Then we feed
+
+327
+00:22:22,680 --> 00:22:26,040
+“H+” into itself as program and input.
+
+328
+00:22:27,640 --> 00:22:30,920
+Now “H” analyzes “H+”...
+
+329
+00:22:32,000 --> 00:22:35,960
+If “H+” halts, “H” will say “yes”,
+
+330
+00:22:36,560 --> 00:22:39,000
+which results in a loop of “H+”.
+
+331
+00:22:40,560 --> 00:22:44,400
+If “H+” would loop, “H” has to say “no”,
+
+332
+00:22:45,120 --> 00:22:49,640
+which would make “H+” halt.
+
+333
+00:22:49,800 --> 00:22:53,320
+So this is a clear contradiction and “H”
+
+334
+00:22:53,400 --> 00:22:57,320
+seems to lie all the time.
+
+335
+00:22:57,320 --> 00:22:59,280
+So the result is...
+
+336
+00:22:59,480 --> 00:23:03,160
+The halting problem can't be solved by a Turing machine
+
+337
+00:23:03,640 --> 00:23:07,800
+and therefore it is not decidable.
+
+338
+00:23:07,800 --> 00:23:12,800
+If you feel now a bit like this gentlemen,
+don't be afraid.
+
+339
+00:23:13,640 --> 00:23:16,600
+The idea of negative self-reference
+is hard
+
+340
+00:23:16,600 --> 00:23:18,600
+to understand by the human brain...
+
+341
+00:23:19,680 --> 00:23:24,400
+Similar to the impossible drawings from
+M.C. Escher,
+
+342
+00:23:24,520 --> 00:23:27,840
+the liar paradox, or simply the question:
+
+343
+00:23:28,800 --> 00:23:31,920
+What would happen if Pinocchio says...
+
+344
+00:23:32,640 --> 00:23:35,880
+My nose is currently growing?
+
+345
+00:23:37,880 --> 00:23:39,120
+Anyway...
+
+346
+00:23:39,120 --> 00:23:41,920
+Let's come back to the starting point,
+
+347
+00:23:41,920 --> 00:23:46,440
+namely the ‘”Entscheidungsproblem” posed by David Hilbert.
+
+348
+00:23:46,440 --> 00:23:51,520
+Since Alan Turing showed that the “Halting problem”
+is not decidable,
+
+349
+00:23:51,800 --> 00:23:55,680
+which is a special case of the
+“Entscheidungsproblem”,
+
+350
+00:23:56,240 --> 00:23:58,880
+he proved that the “Entscheidungsproblem”
+
+351
+00:23:58,880 --> 00:24:02,840
+is also not solvable.
+
+352
+00:24:03,120 --> 00:24:04,680
+Good to hear,
+
+353
+00:24:04,680 --> 00:24:10,920
+since his colleagues Kurt Gödel and Alonzo Church
+came to the same result.
+
+354
+00:24:12,320 --> 00:24:15,840
+Come on, let’s get physical!
+
